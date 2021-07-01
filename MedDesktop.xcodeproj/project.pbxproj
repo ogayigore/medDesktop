@@ -10,7 +10,7 @@
 		30AC76195E525A5305657244 /* Pods_MedDesktop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81CC1538CB1917EB6C47D5D2 /* Pods_MedDesktop.framework */; };
 		54F074F7268368C30085CC3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F074F6268368C30085CC3E /* AppDelegate.swift */; };
 		54F074F9268368C30085CC3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F074F8268368C30085CC3E /* SceneDelegate.swift */; };
-		54F074FB268368C30085CC3E /* AutheticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F074FA268368C30085CC3E /* AutheticationViewController.swift */; };
+		54F074FB268368C30085CC3E /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F074FA268368C30085CC3E /* AuthenticationViewController.swift */; };
 		54F07500268368C90085CC3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54F074FF268368C90085CC3E /* Assets.xcassets */; };
 		54F07503268368C90085CC3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54F07501268368C90085CC3E /* LaunchScreen.storyboard */; };
 		54F0750B268369B40085CC3E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54F0750A268369B40085CC3E /* GoogleService-Info.plist */; };
@@ -22,7 +22,7 @@
 		54F074F3268368C30085CC3E /* MedDesktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedDesktop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F074F6268368C30085CC3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54F074F8268368C30085CC3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		54F074FA268368C30085CC3E /* AutheticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutheticationViewController.swift; sourceTree = "<group>"; };
+		54F074FA268368C30085CC3E /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		54F074FF268368C90085CC3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54F07502268368C90085CC3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54F07504268368C90085CC3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				54F0752E268B23530085CC3E /* AuthenticationView.swift */,
-				54F074FA268368C30085CC3E /* AutheticationViewController.swift */,
+				54F074FA268368C30085CC3E /* AuthenticationViewController.swift */,
 			);
 			name = Authentication;
 			sourceTree = "<group>";
@@ -224,7 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54F074FB268368C30085CC3E /* AutheticationViewController.swift in Sources */,
+				54F074FB268368C30085CC3E /* AuthenticationViewController.swift in Sources */,
 				54F074F7268368C30085CC3E /* AppDelegate.swift in Sources */,
 				54F0752F268B23530085CC3E /* AuthenticationView.swift in Sources */,
 				54F074F9268368C30085CC3E /* SceneDelegate.swift in Sources */,

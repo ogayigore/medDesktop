@@ -10,12 +10,11 @@ import FlagPhoneNumber
 
 class AuthenticationView: UIView {
     
-    var listController: FPNCountryListViewController!
     var phoneNumber: String?
     
     //MARK:- Private Properties
     
-    private lazy var numberTextField: FPNTextField = {
+    private(set) lazy var numberTextField: FPNTextField = {
         let textField = FPNTextField()
         textField.setFlag(key: .RU)
         textField.flagButtonSize = CGSize(width: 60, height: 60)
@@ -81,38 +80,9 @@ class AuthenticationView: UIView {
         fetchCodeButton.isEnabled = false
         
         numberTextField.displayMode = .list
-        numberTextField.delegate = self
         
-        listController = FPNCountryListViewController(style: .grouped)
-        listController.setup(repository: numberTextField.countryRepository)
     }
     
 }
 
-extension AuthenticationView: FPNTextFieldDelegate {
-    func fpnDidSelectCountry(name: String, dialCode: String, code: String) {
-        
-    }
-    
-    func fpnDidValidatePhoneNumber(textField: FPNTextField, isValid: Bool) {
-        if isValid {
-            fetchCodeButton.alpha = 1
-            fetchCodeButton.isEnabled = true
-            
-            phoneNumber = numberTextField.getFormattedPhoneNumber(format: .International)
-        } else {
-            fetchCodeButton.alpha = 0.5
-            fetchCodeButton.isEnabled = false
-        }
-    }
-    
-    func fpnDisplayCountryList() {
-        let navigationController = UINavigationController(rootViewController: listController)
-        listController.title = "Страны"
-        numberTextField.text = ""
-        fetchCodeButton.alpha = 0.5
-        fetchCodeButton.isEnabled = false
-    }
-    
-    
-}
+
