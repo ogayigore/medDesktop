@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		30AC76195E525A5305657244 /* Pods_MedDesktop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81CC1538CB1917EB6C47D5D2 /* Pods_MedDesktop.framework */; };
+		547A077E268F35AD0095B74E /* ValidateCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A077D268F35AD0095B74E /* ValidateCodeView.swift */; };
+		547A0780268F35C50095B74E /* ValidateCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A077F268F35C50095B74E /* ValidateCodeViewController.swift */; };
 		54F074F7268368C30085CC3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F074F6268368C30085CC3E /* AppDelegate.swift */; };
 		54F074F9268368C30085CC3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F074F8268368C30085CC3E /* SceneDelegate.swift */; };
 		54F074FB268368C30085CC3E /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F074FA268368C30085CC3E /* AuthenticationViewController.swift */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		0FB9FA9DD1A3AA4008CBD48E /* Pods-MedDesktop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedDesktop.release.xcconfig"; path = "Target Support Files/Pods-MedDesktop/Pods-MedDesktop.release.xcconfig"; sourceTree = "<group>"; };
+		547A077D268F35AD0095B74E /* ValidateCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateCodeView.swift; sourceTree = "<group>"; };
+		547A077F268F35C50095B74E /* ValidateCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateCodeViewController.swift; sourceTree = "<group>"; };
 		54F074F3268368C30085CC3E /* MedDesktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedDesktop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F074F6268368C30085CC3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54F074F8268368C30085CC3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +48,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		547A077C268F350C0095B74E /* ValidateCode */ = {
+			isa = PBXGroup;
+			children = (
+				547A077D268F35AD0095B74E /* ValidateCodeView.swift */,
+				547A077F268F35C50095B74E /* ValidateCodeViewController.swift */,
+			);
+			path = ValidateCode;
+			sourceTree = "<group>";
+		};
 		54F074EA268368C30085CC3E = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +78,7 @@
 		54F074F5268368C30085CC3E /* MedDesktop */ = {
 			isa = PBXGroup;
 			children = (
+				547A077C268F350C0095B74E /* ValidateCode */,
 				54F0752D268B23170085CC3E /* Authentication */,
 				54F0750C2684B3110085CC3E /* BaseComponents */,
 				54F074FF268368C90085CC3E /* Assets.xcassets */,
@@ -225,6 +239,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				54F074FB268368C30085CC3E /* AuthenticationViewController.swift in Sources */,
+				547A077E268F35AD0095B74E /* ValidateCodeView.swift in Sources */,
+				547A0780268F35C50095B74E /* ValidateCodeViewController.swift in Sources */,
 				54F074F7268368C30085CC3E /* AppDelegate.swift in Sources */,
 				54F0752F268B23530085CC3E /* AuthenticationView.swift in Sources */,
 				54F074F9268368C30085CC3E /* SceneDelegate.swift in Sources */,

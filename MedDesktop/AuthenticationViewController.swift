@@ -24,6 +24,8 @@ class AuthenticationViewController: UIViewController {
         view.addGestureRecognizer(tapGesture)
     }
     
+    //MARK:- Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,8 +33,10 @@ class AuthenticationViewController: UIViewController {
         configureView()
     }
 
-    func configureView() {
-//        customView.fetchCodeButton.addAction(<#T##action: UIAction##UIAction#>, for: .touchUpInside)
+    //MARK:- Methods
+    
+    private func configureView() {
+        customView.fetchCodeButton.addTarget(self, action:  #selector(fetchButtonPressed), for: .touchUpInside)
         
         listController = FPNCountryListViewController(style: .grouped)
         listController.setup(repository: customView.numberTextField.countryRepository)
@@ -40,7 +44,14 @@ class AuthenticationViewController: UIViewController {
             self.customView.numberTextField.setFlag(countryCode: country.code)
         }
     }
+    
+    @objc func fetchButtonPressed() {
+        let validateCodeVC = ValidateCodeViewController()
+        self.navigationController?.pushViewController(validateCodeVC, animated: true)
+    }
 }
+
+//MARK:- FPNTextFieldDelegate
 
 extension AuthenticationViewController: FPNTextFieldDelegate {
     func fpnDidSelectCountry(name: String, dialCode: String, code: String) {

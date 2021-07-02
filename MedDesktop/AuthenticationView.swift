@@ -37,7 +37,7 @@ class AuthenticationView: UIView {
         let button = UIButton()
         button.setTitle("Получить код", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont(name: "HelveticaNeue-Light", size: 25)
+        button.titleLabel?.font = UIFont(name: "HelveticaNeue-Light", size: 30)
         button.backgroundColor = #colorLiteral(red: 0.6654158831, green: 0.578256011, blue: 1, alpha: 1)
         button.layer.cornerRadius = 35
         button.layer.borderWidth = 1
