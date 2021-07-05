@@ -10,6 +10,8 @@
 		30AC76195E525A5305657244 /* Pods_MedDesktop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81CC1538CB1917EB6C47D5D2 /* Pods_MedDesktop.framework */; };
 		547A077E268F35AD0095B74E /* ValidateCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A077D268F35AD0095B74E /* ValidateCodeView.swift */; };
 		547A0780268F35C50095B74E /* ValidateCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A077F268F35C50095B74E /* ValidateCodeViewController.swift */; };
+		547A0785269336F40095B74E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A0784269336F40095B74E /* MainViewController.swift */; };
+		547A0787269336FE0095B74E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A0786269336FE0095B74E /* MainView.swift */; };
 		54F074F7268368C30085CC3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F074F6268368C30085CC3E /* AppDelegate.swift */; };
 		54F074F9268368C30085CC3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F074F8268368C30085CC3E /* SceneDelegate.swift */; };
 		54F074FB268368C30085CC3E /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F074FA268368C30085CC3E /* AuthenticationViewController.swift */; };
@@ -23,6 +25,8 @@
 		0FB9FA9DD1A3AA4008CBD48E /* Pods-MedDesktop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedDesktop.release.xcconfig"; path = "Target Support Files/Pods-MedDesktop/Pods-MedDesktop.release.xcconfig"; sourceTree = "<group>"; };
 		547A077D268F35AD0095B74E /* ValidateCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateCodeView.swift; sourceTree = "<group>"; };
 		547A077F268F35C50095B74E /* ValidateCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateCodeViewController.swift; sourceTree = "<group>"; };
+		547A0784269336F40095B74E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		547A0786269336FE0095B74E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		54F074F3268368C30085CC3E /* MedDesktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedDesktop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F074F6268368C30085CC3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54F074F8268368C30085CC3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +61,15 @@
 			path = ValidateCode;
 			sourceTree = "<group>";
 		};
+		547A07832693369E0095B74E /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				547A0786269336FE0095B74E /* MainView.swift */,
+				547A0784269336F40095B74E /* MainViewController.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
 		54F074EA268368C30085CC3E = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +91,7 @@
 		54F074F5268368C30085CC3E /* MedDesktop */ = {
 			isa = PBXGroup;
 			children = (
+				547A07832693369E0095B74E /* MainScreen */,
 				547A077C268F350C0095B74E /* ValidateCode */,
 				54F0752D268B23170085CC3E /* Authentication */,
 				54F0750C2684B3110085CC3E /* BaseComponents */,
@@ -238,6 +252,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				547A0785269336F40095B74E /* MainViewController.swift in Sources */,
+				547A0787269336FE0095B74E /* MainView.swift in Sources */,
 				54F074FB268368C30085CC3E /* AuthenticationViewController.swift in Sources */,
 				547A077E268F35AD0095B74E /* ValidateCodeView.swift in Sources */,
 				547A0780268F35C50095B74E /* ValidateCodeViewController.swift in Sources */,
@@ -383,6 +399,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R82428TV8S;
 				INFOPLIST_FILE = MedDesktop/Info.plist;
@@ -392,8 +409,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.igorOh.MedDesktop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -403,6 +421,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R82428TV8S;
 				INFOPLIST_FILE = MedDesktop/Info.plist;
@@ -412,8 +431,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.igorOh.MedDesktop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

@@ -6,8 +6,13 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ValidateCodeViewController: UIViewController {
+    
+    //MARK:- Properties
+    
+    var verificationID: String!
     
     //MARK:- Private Properties
     
@@ -32,8 +37,32 @@ class ValidateCodeViewController: UIViewController {
     private func configureView() {
         
         self.customView.codeTextView.delegate = self
+        customView.checkButton.addTarget(self, action: #selector(checkButtonPressed), for: .touchUpInside)
     }
     
+    @objc func checkButtonPressed() {
+        guard let code = customView.codeTextView.text else { return }
+        let credentional = PhoneAuthProvider.provider().credential(withVerificationID: verificationID, verificationCode: code)
+        
+        Auth.auth().signIn(with: credentional) { _, error in
+            if error != nil {
+                self.customView.codeTextView.text = ""
+                self.customView.codeTextView.layer.borderColor = UIColor.red.cgColor
+                self.customView.label.text = "Неверный код"
+                self.customView.label.textColor = .red
+            } else {
+                self.showMainVC()
+            }
+        }
+    }
+    
+    private func showMainVC() {
+        let mainViewController = MainViewController()
+        let navigationController = UINavigationController()
+        navigationController.addChild(mainViewController)
+        navigationController.modalPresentationStyle = .fullScreen
+        present(navigationController, animated: true, completion: nil)
+    }
 }
 
 //MARK:- UITextViewDelegate

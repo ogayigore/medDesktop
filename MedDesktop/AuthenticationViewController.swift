@@ -6,10 +6,14 @@
 //
 
 import UIKit
+import FirebaseAuth
 import FlagPhoneNumber
 
 class AuthenticationViewController: UIViewController {
 
+    //MARK:- Properties
+    
+    var phoneNumber: String?
     var listController: FPNCountryListViewController!
     
     //MARK:- Private Properties
@@ -46,8 +50,27 @@ class AuthenticationViewController: UIViewController {
     }
     
     @objc func fetchButtonPressed() {
+        print("fetchButtonPressed()")
+        guard phoneNumber != nil else { return }
+        print("PHONE NUMBER = \(phoneNumber)")
+        PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber!, uiDelegate: nil) { verificationID, error in
+            
+            if error != nil {
+                print("ERROR")
+                print(error?.localizedDescription ?? "is empty")
+            } else {
+                self.showValidateCodeVC(verificationID: verificationID!)
+            }
+            
+        }
+    }
+    
+    private func showValidateCodeVC(verificationID: String) {
+        print("showValidateCodeVC")
         let validateCodeVC = ValidateCodeViewController()
-        self.navigationController?.pushViewController(validateCodeVC, animated: true)
+        validateCodeVC.modalPresentationStyle = .fullScreen
+        validateCodeVC.verificationID = verificationID
+        self.present(validateCodeVC, animated: true, completion: nil)
     }
 }
 
@@ -63,7 +86,7 @@ extension AuthenticationViewController: FPNTextFieldDelegate {
             customView.fetchCodeButton.alpha = 1
             customView.fetchCodeButton.isEnabled = true
             
-            customView.phoneNumber = customView.numberTextField.getFormattedPhoneNumber(format: .International)
+            phoneNumber = customView.numberTextField.getFormattedPhoneNumber(format: .International)
         } else {
             customView.fetchCodeButton.alpha = 0.5
             customView.fetchCodeButton.isEnabled = false

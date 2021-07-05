@@ -26,7 +26,7 @@ class ValidateCodeView: UIView {
         return textView
     }()
     
-    private lazy var label: UILabel = {
+    private(set) lazy var label: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
         label.text = "Введите код"

@@ -10,8 +10,6 @@ import FlagPhoneNumber
 
 class AuthenticationView: UIView {
     
-    var phoneNumber: String?
-    
     //MARK:- Private Properties
     
     private(set) lazy var numberTextField: FPNTextField = {
