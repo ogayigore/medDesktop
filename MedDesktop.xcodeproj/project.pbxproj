@@ -70,6 +70,15 @@
 			path = MainScreen;
 			sourceTree = "<group>";
 		};
+		547A0788269361950095B74E /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				54F0752E268B23530085CC3E /* AuthenticationView.swift */,
+				54F074FA268368C30085CC3E /* AuthenticationViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		54F074EA268368C30085CC3E = {
 			isa = PBXGroup;
 			children = (
@@ -91,9 +100,9 @@
 		54F074F5268368C30085CC3E /* MedDesktop */ = {
 			isa = PBXGroup;
 			children = (
+				547A0788269361950095B74E /* Authentication */,
 				547A07832693369E0095B74E /* MainScreen */,
 				547A077C268F350C0095B74E /* ValidateCode */,
-				54F0752D268B23170085CC3E /* Authentication */,
 				54F0750C2684B3110085CC3E /* BaseComponents */,
 				54F074FF268368C90085CC3E /* Assets.xcassets */,
 				54F07504268368C90085CC3E /* Info.plist */,
@@ -110,15 +119,6 @@
 				54F074F8268368C30085CC3E /* SceneDelegate.swift */,
 			);
 			path = BaseComponents;
-			sourceTree = "<group>";
-		};
-		54F0752D268B23170085CC3E /* Authentication */ = {
-			isa = PBXGroup;
-			children = (
-				54F0752E268B23530085CC3E /* AuthenticationView.swift */,
-				54F074FA268368C30085CC3E /* AuthenticationViewController.swift */,
-			);
-			name = Authentication;
 			sourceTree = "<group>";
 		};
 		D55C98C6A53854E4E4E52B6C /* Pods */ = {
