@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -20,6 +21,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         navigationController.addChild(AuthenticationViewController())
         window?.rootViewController = AuthenticationViewController()
         window?.makeKeyAndVisible()
+    }
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        print("URLCONTEXT")
+        for urlContext in URLContexts {
+            let url = urlContext.url
+            Auth.auth().canHandle(url)
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

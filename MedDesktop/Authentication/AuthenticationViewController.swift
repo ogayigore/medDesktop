@@ -28,8 +28,6 @@ class AuthenticationViewController: UIViewController {
         view.addGestureRecognizer(tapGesture)
     }
     
-    //MARK:- Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,6 +48,7 @@ class AuthenticationViewController: UIViewController {
     }
     
     @objc func fetchButtonPressed() {
+        Auth.auth().settings?.isAppVerificationDisabledForTesting = false
         print("fetchButtonPressed()")
         guard phoneNumber != nil else { return }
         print("PHONE NUMBER = \(phoneNumber)")
@@ -102,6 +101,5 @@ extension AuthenticationViewController: FPNTextFieldDelegate {
         customView.fetchCodeButton.isEnabled = false
         self.present(navigationController, animated: true)
     }
-    
     
 }

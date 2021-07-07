@@ -73,14 +73,20 @@ class ValidateCodeView: UIView {
             codeTextView.centerYAnchor.constraint(equalTo: centerYAnchor),
             codeTextView.centerXAnchor.constraint(equalTo: centerXAnchor),
             codeTextView.heightAnchor.constraint(equalToConstant: 70),
-            codeTextView.widthAnchor.constraint(equalToConstant: 400),
+            codeTextView.widthAnchor.constraint(equalToConstant: 300),
+            codeTextView.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor, constant: 16),
+            codeTextView.trailingAnchor.constraint(greaterThanOrEqualTo: trailingAnchor, constant: 16),
             checkButton.topAnchor.constraint(equalTo: codeTextView.bottomAnchor, constant: 8),
             checkButton.centerXAnchor.constraint(equalTo: centerXAnchor),
             checkButton.heightAnchor.constraint(equalToConstant: 70),
-            checkButton.widthAnchor.constraint(equalToConstant: 400),
+            checkButton.widthAnchor.constraint(equalToConstant: 300),
+            checkButton.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor, constant: 16),
+            checkButton.trailingAnchor.constraint(greaterThanOrEqualTo: trailingAnchor, constant: 16),
             label.centerXAnchor.constraint(equalTo: centerXAnchor),
             label.heightAnchor.constraint(equalToConstant: 70),
-            label.widthAnchor.constraint(equalToConstant: 400),
+            label.widthAnchor.constraint(equalToConstant: 300),
+            label.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor, constant: 16),
+            label.trailingAnchor.constraint(greaterThanOrEqualTo: trailingAnchor, constant: 16),
             label.bottomAnchor.constraint(equalTo: codeTextView.topAnchor, constant: 8)
         ])
         

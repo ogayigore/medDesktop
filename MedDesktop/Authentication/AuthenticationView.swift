@@ -26,7 +26,7 @@ class AuthenticationView: UIView {
         textField.layer.borderColor = UIColor.black.cgColor
         textField.keyboardType = .numberPad
         textField.backgroundColor = #colorLiteral(red: 0.6654158831, green: 0.578256011, blue: 1, alpha: 1)
-        textField.font = UIFont(name: "HelveticaNeue-Light", size: 30)
+        textField.font = UIFont(name: "HelveticaNeue-Light", size: 25)
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
@@ -67,11 +67,15 @@ class AuthenticationView: UIView {
             numberTextField.centerYAnchor.constraint(equalTo: centerYAnchor),
             numberTextField.centerXAnchor.constraint(equalTo: centerXAnchor),
             numberTextField.heightAnchor.constraint(equalToConstant: 70),
-            numberTextField.widthAnchor.constraint(equalToConstant: 400),
+            numberTextField.widthAnchor.constraint(equalToConstant: 300),
+            numberTextField.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor, constant: 16),
+            numberTextField.trailingAnchor.constraint(greaterThanOrEqualTo: trailingAnchor, constant: 16),
             fetchCodeButton.topAnchor.constraint(equalTo: numberTextField.bottomAnchor, constant: 8),
             fetchCodeButton.centerXAnchor.constraint(equalTo: centerXAnchor),
             fetchCodeButton.heightAnchor.constraint(equalToConstant: 70),
-            fetchCodeButton.widthAnchor.constraint(equalToConstant: 400)
+            fetchCodeButton.widthAnchor.constraint(equalToConstant: 300),
+            fetchCodeButton.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor, constant: 16),
+            fetchCodeButton.trailingAnchor.constraint(greaterThanOrEqualTo: trailingAnchor, constant: 16)
         ])
         
         fetchCodeButton.alpha = 0.5
